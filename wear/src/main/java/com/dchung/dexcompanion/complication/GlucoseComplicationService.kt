@@ -22,7 +22,14 @@ class GlucoseComplicationService : SuspendingComplicationDataSourceService() {
     override suspend fun onComplicationRequest(
         request: ComplicationRequest
     ): ComplicationData {
-        return createComplicationData("125", "Glucose 125")
+
+        val glucose = getSharedPreferences("glucose", MODE_PRIVATE)
+            .getInt("current_glucose", 125)
+
+        return createComplicationData(
+            glucose.toString(),
+            "Glucose $glucose"
+        )
     }
 
     private fun createComplicationData(text: String, contentDescription: String) =
