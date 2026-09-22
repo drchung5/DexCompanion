@@ -1,0 +1,28 @@
+# Gradle and Kotlin generated files
+.gradle/
+.kotlin/
+build/
+
+# Local Android SDK configuration
+local.properties
+
+# Android Studio local state
+*.iml
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.idea/shelf/
+.idea/deploymentTargetDropDown.xml
+
+# Android build and profiling output
+captures/
+.externalNativeBuild/
+.cxx/
+*.hprof
+
+# Operating system files
+.DS_Store
+Thumbs.db
